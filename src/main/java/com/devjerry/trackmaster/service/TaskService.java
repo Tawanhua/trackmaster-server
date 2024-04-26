@@ -30,9 +30,8 @@ public class TaskService implements ITaskService {
             tk.setTitle(task.getTitle());
             tk.setDescription(task.getDescription());
             tk.setDuration(task.getDuration());
-            tk.setDueDate(task.getDueDate());
             return taskRepository.save(tk);
-        }).orElseThrow(() -> new TaskNotFoundException("Sorry, task could not be found."));
+        }).orElseThrow(() -> new TaskNotFoundException("Sorry, task could not be found"));
     }
 
     @Override
@@ -46,5 +45,6 @@ public class TaskService implements ITaskService {
         if(!taskRepository.existsById(id)) {
             throw new TaskNotFoundException("Sorry, task not found.");
         }
+        taskRepository.deleteById(id);
     }
 }
