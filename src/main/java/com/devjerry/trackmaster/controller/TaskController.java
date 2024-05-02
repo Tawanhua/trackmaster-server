@@ -1,7 +1,7 @@
 package com.devjerry.trackmaster.controller;
 
 import com.devjerry.trackmaster.model.Task;
-import com.devjerry.trackmaster.service.ITaskService;
+import com.devjerry.trackmaster.service.TaskService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/tasks")
 @RequiredArgsConstructor
 public class TaskController {
-    private final ITaskService taskService;
+    private final TaskService taskService;
     @GetMapping
     public ResponseEntity<List<Task>> getTasks() {
         return new ResponseEntity<>(taskService.getTask(), HttpStatus.FOUND);
