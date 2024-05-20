@@ -10,7 +10,7 @@ Key Components:
 
 * Spring Boot: Provides a lightweight framework for building Java-based web applications. It simplifies configuration and offers out-of-the-box features for rapid development.
 
-* Spring Data JPA: Offers easy integration with JPA (Java Persistence API) for database access. It simplifies data access layer implementation by providing repositories and automatic CRUD operations.
+* Spring Web: Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
 
 * Spring MVC: Handles web requests and defines RESTful endpoints. Controllers are responsible for processing incoming requests, invoking appropriate service methods, and returning responses.
 
